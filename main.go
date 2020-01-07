@@ -3,16 +3,18 @@ package main
 import "fmt"
 
 func BonusAmount(percent int, salary []int) int {
-	SumOfBonuses := 0
+	sumOfBonuses := 0
 	for _, employee := range salary{
-		if employee > 10_000{
-			bonus := employee - 10_000
+		bonusBorder := 10_000
+		if employee > bonusBorder{
+			bonus := employee - bonusBorder
 			bonus = bonus * percent / 100
-			SumOfBonuses = SumOfBonuses + bonus
+			sumOfBonuses = sumOfBonuses + bonus
 		}
 	}
-	return SumOfBonuses
+	return sumOfBonuses
 }
+
 
 func main() {
 	salary := []int{12000, 8000, 15000, 8000}
