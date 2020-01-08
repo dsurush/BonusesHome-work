@@ -5,7 +5,7 @@ import "fmt"
 func BonusAmount(percent int, salary []int) int {
 	sumOfBonuses := 0
 	for _, employee := range salary{
-		bonusBorder := 10_000
+		const bonusBorder = 10_000
 		if employee > bonusBorder{
 			bonus := employee - bonusBorder
 			bonus = bonus * percent / 100
